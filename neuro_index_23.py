@@ -30,7 +30,7 @@ def load_data():
     #rename columns
 
     rename_dict = {
-    "WAIT Indicator for orphan non-onco diseases": "WAIT indicator (orphan non-onco)",
+    "WAIT Indicator for orphan non-onco diseases (Desc order)": "WAIT indicator (orphan non-onco)",
     "Health care expenditure by function (Inpatient curative and rehabilitative care HC11_21)": "Inpatient curative and rehabilitative care Expenditure",
     "Health care expenditure by function (Long-term care (health) HC3)": "Long-term care Expenditure",
     "Health care expenditure by function (Preventive care HC6)": "Preventive Expenditure",
@@ -123,6 +123,8 @@ if selection_category == "Household OOP":
     st.caption("Household OOP is referring to the Household out-of-pocket payments in a descending order")
 elif selection_category == "Dependence Ratio":
     st.caption("Dependence ratio is in a descending order")
+elif selection_category == "WAIT indicator (orphan non-onco)":
+    st.caption("WAIT indicator (orphan non-onco) is in a descending order")
 
 
 
