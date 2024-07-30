@@ -14,7 +14,7 @@ st.title('NEURO Index 2023')
 
 
 st.sidebar.write("NEURO Index 2023")
-st.sidebar.caption("This index shows how well are countries prepared for neuro-generative diseases.")
+st.sidebar.caption("This index shows how well are countries prepared for neuro-degenerative diseases.")
 st.sidebar.caption("Created by Katarina Bartekova and MSquare. All rights reserved")
 
 
