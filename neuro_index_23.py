@@ -94,7 +94,10 @@ highlight_value = values[num_country]
 fig, ax = plt.subplots(figsize=(18, 12))
 
 # Plot the bar chart
-ax.bar(categories, values, width=0.4, alpha = 0.5)
+bars = ax.bar(categories, values, width=0.4, alpha=0.5)
+for bar in bars:
+    yval = bar.get_height()
+    ax.text(bar.get_x() + bar.get_width() / 2, yval + 0.1, round(yval, 2), ha='center', va='bottom')
 ax.tick_params(axis='x', labelsize=9)
 ax.set_xlabel('Countries')
 ax.set_ylabel('Scores per ' + selection_category, size = 15)
