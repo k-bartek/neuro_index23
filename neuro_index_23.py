@@ -6,22 +6,22 @@ from math import pi
 
 
 st.set_page_config(
-    page_title="NEURO Index 2023",
+    page_title="NEURO Index 2024",
     page_icon=":brain:"
     )
 
-st.title('NEURO Index 2023')
+st.title('NEURO Map 2024')
 
 
-st.sidebar.write("NEURO Index 2023")
-st.sidebar.caption("This index shows how well are countries prepared for neuro-degenerative diseases.")
+st.sidebar.write("NEURO Map 2024")
+st.sidebar.caption("This Neuro Map shows how well are countries prepared for neuro-degenerative diseases.")
 st.sidebar.caption("Created by Katarina Bartekova and MSquare. All rights reserved")
 
 
 
 @st.cache_data
 def load_data():
-    data = pd.read_csv('data.csv')
+    data = pd.read_csv('data.csv', sep = ";")
     lowercase = lambda x: str(x).lower()
     #data.rename(lowercase, axis='columns', inplace=True)
     data['country'] = data['country'].replace('AVERAGE (NL,DE)', 'Benchmark (NL, DE)')  #benchmark average west
