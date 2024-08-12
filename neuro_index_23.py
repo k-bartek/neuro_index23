@@ -21,7 +21,7 @@ st.sidebar.caption("Created by Katarina Bartekova and MSquare. All rights reserv
 
 @st.cache_data
 def load_data():
-    data = pd.read_csv('data2.csv')
+    data = pd.read_csv('data_new2.csv')
     lowercase = lambda x: str(x).lower()
     #data.rename(lowercase, axis='columns', inplace=True)
     data['country'] = data['country'].replace('AVERAGE (NL,DE)', 'Benchmark (NL, DE)')  #benchmark average west
